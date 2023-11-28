@@ -21,8 +21,6 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
   try {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [{ model: Product }],
@@ -40,8 +38,26 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   // create a new category
+  const { category_name } = req.body;
+
+  if (!category_name || typeof category_name !== 'string' || category_name.trim() === '') {
+    return res.status(400).json({ message: 'Invalid category_name' });
+  }
+
+  try {
+    const categoryData = await Category.create({ category_name });
+
+    if (!categoryData) {
+      res.status(500).json({ message: 'Failed to create category' });
+    } else {
+      res.status(201).json(categoryData); // 201 status for resource creation
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
 });
 
 router.put('/:id', (req, res) => {
