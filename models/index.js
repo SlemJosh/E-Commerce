@@ -36,7 +36,7 @@ Tag.belongsToMany(Product, {
     // Because we are using many to many relationship, using some additional paramters will be more expressive.
     unique: false,
   },
-  //Creating an alias
+  // Creating an alias
   as: "products"
 });
 
