@@ -17,6 +17,10 @@ Category.hasMany(Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
+Product.belongsToMany(Tag, {
+  through: ProductTag,
+  foreginKey: "product_id"
+});
 
 // Tags belongToMany Products (through ProductTag)
 
