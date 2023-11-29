@@ -25,7 +25,7 @@ Product.belongsToMany(Tag, {
     unique: false,
   },
   // Creating an alias
-  as: "tags"
+  as: "products"
 });
 
 // Tags belongToMany Products (through ProductTag)
@@ -37,7 +37,7 @@ Tag.belongsToMany(Product, {
     unique: false,
   },
   // Creating an alias
-  as: "products"
+  as: "tags"
 });
 
 module.exports = {
