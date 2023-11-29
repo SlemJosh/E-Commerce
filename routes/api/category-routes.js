@@ -119,12 +119,11 @@ router.delete('/:id', async (req, res) => {
 
     // Check if the category was not found or not deleted
     if (rowsAffected > 0) {
-      res.status(204).send(); // 204 status for No Content
+      res.status(204).json({ message: 'Category deleted successfully' }); /
     } else {
       res.status(404).json({ message: 'Category not found or not deleted' });
     }
-  }
-  catch (err) {
+  } catch (err) {
     // Handle errors and respond with a 500 status code
     console.error('Error:', err);
     res.status(500).json({ message: 'Internal Server Error' });
