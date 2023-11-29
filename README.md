@@ -21,6 +21,11 @@ You will need node, MySQL, as well as the multiple npm packages listed on the se
 
 ## Usage
 
+![Ecommerce Back End screenshot](/assets/ecommerce1.png)
+![Ecommerce Back End screenshot](/assets/ecommerce2.png)
+
+---
+
 To use the project, you will first need to start up and source the SQL db/schema. Once that is done, you can type in npm run seed to populate the database. Lastly just need to do a npm start, to get the server up and running. From there it's all backend stuff that we use Insomnia to get a better visualization of our work.
 
 ## License
