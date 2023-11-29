@@ -119,7 +119,7 @@ router.delete('/:id', async (req, res) => {
 
     // Check if the category was not found or not deleted
     if (rowsAffected > 0) {
-      res.status(204).json({ message: 'Category deleted successfully' }); /
+      res.status(200).json({ message: 'Category deleted successfully' });
     } else {
       res.status(404).json({ message: 'Category not found or not deleted' });
     }
