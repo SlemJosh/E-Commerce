@@ -22,7 +22,8 @@ You will need node, MySQL, as well as the multiple npm packages listed on the se
 ## Usage
 
 ![Ecommerce Back End screenshot](/assets/ecommerce1.png)
-![Ecommerce Back End screenshot](/assets/ecommerce2.png)
+![Ecommerce Back End screenshot](/assets/ecommerce2.png)|
+![Ecommerce Back End screenshot](/assets/ecommerce3.png)
 
 ---
 
