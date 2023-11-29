@@ -82,7 +82,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (rowsAffected > 0) {
-      res.status(204).send(); // 204 status for No Content
+      res.status(200).json({ message: 'Tag deleted successfully' });
     } else {
       res.status(404).json({ message: 'Tag not found or not deleted' });
     }
